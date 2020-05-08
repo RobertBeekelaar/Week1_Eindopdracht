@@ -1,0 +1,163 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(43, 56, 56);
+  transition: all 0.4s ease-in-out;
+}
+
+#title{
+  text-align: right;
+  margin-top: 85px;
+  font-weight: 500;
+  font-size: 60px;
+  padding-right: 30px ;
+  letter-spacing: 3px;
+}
+
+.white-background{
+  background-color: rgb(250, 250, 250);
+}
+
+.yellow-background{
+  background-color: rgb(241, 215, 126);
+}
+
+.red-background{
+  background-color: rgb(182, 80, 66);
+}
+
+.green-background{
+  background-color: rgb(81, 128, 88);
+}
+
+.azul-background{
+  background-color: rgb(29, 155, 144);
+}
+
+.blue-background{
+  background-color: rgb(51, 124, 153);
+}
+
+.gray-background{
+  background-color: rgb(104, 127, 136);
+}
+
+
+.nav-main{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+  background-color: rgb(43, 56, 56);
+  color: #fff;
+}
+
+.nav-btn{
+  width: 60px;
+  height: 100%;
+  font-size: 22;
+  background-color: drgb(43, 56, 56);
+  background-image: url("menu.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.nav-btn:hover{
+  opacity: 60%;
+}
+
+.nav-main ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0px; 
+}
+
+.nav-main ul li{
+  list-style: none;
+  line-height: 30px;
+  font-size: 20px; 
+}
+
+.nav-main ul li a{
+  display: block;
+  height: 100%;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(5, 5, 5);
+  font-size: 16px;
+}
+
+.nav-sidebar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: calc(100vh - 60px);
+  padding: 0 5px;
+  background-color: rgb(54, 68, 68);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-sidebar ul{
+ padding-top: 15px;
+ overflow: hidden;
+ visibility: hidden;
+}
+
+.nav-sidebar ul li{
+  line-height: 30px;
+  list-style: none;
+}
+
+.nav-sidebar ul li span, .nav-sidebar ul li a{
+ display: block;
+ height: 60px;
+ padding: 0 10px;
+ text-decoration: none;
+ text-transform: uppercase;
+ color: #fff;
+ font-size: 20px; 
+ white-space: nowrap;
+ opacity: 0;
+ transition: all 0.2s ease-in-out;
+}
+.nav-sidebar ul li span{
+  color:rgb(22, 22, 22);
+  font-size: 20px; 
+}
+
+#whiteb:hover{
+  color: rgb(196, 196, 196);
+}
+
+
+#yellowb:hover{
+  color: rgb(241, 215, 126);
+}
+
+#redb:hover{
+  color: rgb(182, 80, 66);
+}
+
+#greenb:hover{
+  color: rgb(81, 128, 88);
+}
+
+#azulb:hover{
+  color: rgb(29, 155, 144);
+}
+
+#blueb:hover{
+  color: rgb(51, 124, 153);
+}
+
+#grayb:hover{
+  color: rgb(134, 147, 153);
+}
