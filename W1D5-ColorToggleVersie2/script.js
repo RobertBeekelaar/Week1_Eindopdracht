@@ -1,5 +1,5 @@
 let toggleNavStatus = false;
-
+//ToggleMenu
 let toggleNav = function () {
   let getSidebar = document.querySelector(".nav-sidebar");
   let getSidebarUl = document.querySelector(".nav-sidebar ul");
@@ -8,20 +8,18 @@ let toggleNav = function () {
 
   if (toggleNavStatus === false) {
     getSidebarUl.style.visibility = "visible";
-    getSidebar.style.width = "250px";
+    getSidebar.style.width = "260px";
     getSidebarTitle.style.opacity = "0.8";
 
     let arrayLength = getSidebarLinks.length;
     for (let i = 0; i < arrayLength; i++) {
       getSidebarLinks[i].style.opacity = "1";
     }
-
     toggleNavStatus = true;
-    
   }
 
   else if (toggleNavStatus === true) {
-    getSidebar.style.width = "50px";
+    getSidebar.style.width = "40px";
     getSidebarTitle.style.opacity = "0";
 
     let arrayLength = getSidebarLinks.length;
@@ -29,76 +27,31 @@ let toggleNav = function () {
       getSidebarLinks[i].style.opacity = "0";
     }
     getSidebarUl.style.visibility = "hidden";
-
     toggleNavStatus = false;
-
   }
-
 }
+//colorToggle
+const liNodeList = document.querySelectorAll('li');
+let liArray = [];
+let colorArray = ["white", "#F1D77E", "#B65042", "#518058", "#21918B", "#337C99", "#869399", ''];
+let backgroundArray = ["white", "yellow", "red", "green", "azul", "blue", "gray", ''];
+const body = document.getElementById('body-color');
 
+Array.from(liNodeList).forEach(function (li) {
+  liArray.push(li)
+});
 
-const white = document.querySelector('#whiteb');
+for (let i = 0; i < liArray.length; i++) {
+  liArray[i].onclick = function () {
 
-white.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "white-background";
-  document.getElementById('title').innerHTML = "WHITE";
-  
-}
-);
-
-
-const yellow = document.querySelector('#yellowb');
-
-yellow.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "yellow-background";
-  document.getElementById('title').innerHTML = "YELLOW";
-}
-);
-
-const red = document.querySelector('#redb');
-
-red.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "red-background";
-  document.getElementById('title').innerHTML = "RED";
-}
-);
-
-
-const green = document.querySelector('#greenb');
-
-green.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "green-background";
-  document.getElementById('title').innerHTML = "GREEN";
-}
-);
-
-const blue = document.querySelector('#blueb');
-
-blue.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "blue-background";
-  document.getElementById('title').innerHTML = "BLUE";
-}
-);
-
-const gray = document.querySelector('#grayb');
-
-gray.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "gray-background";
-  document.getElementById('title').innerHTML = "GRAY";
-}
-);
-
-const azul = document.querySelector('#azulb');
-
-azul.addEventListener('click', function (e) {
-
-  document.getElementById('body').className = "azul-background";
-  document.getElementById('title').innerHTML = "AZUL";
-}
-);
+    if (liArray[i] == liArray[7]) {
+      liArray[7] = prompt("give your own hex color value!")
+      let textValue = liArray[7];
+      document.body.style.backgroundColor = liArray[7]
+      document.getElementById('color-heading').innerHTML = (textValue)
+    } else {
+      document.body.style.backgroundColor = colorArray[i];
+      document.getElementById('color-heading').innerHTML = (backgroundArray[i])
+    };
+  };
+};

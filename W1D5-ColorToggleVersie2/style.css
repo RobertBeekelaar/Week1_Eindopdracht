@@ -1,69 +1,50 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(43, 56, 56);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
 }
 
-#title{
-  text-align: right;
-  margin-top: 85px;
-  font-weight: 500;
-  font-size: 60px;
-  padding-right: 30px ;
-  letter-spacing: 3px;
-}
-
-.white-background{
+#body-color{
   background-color: rgb(250, 250, 250);
 }
 
-.yellow-background{
-  background-color: rgb(241, 215, 126);
+#color-heading{
+  text-align: right;
+  margin-top: 75px;
+  font-weight: 500;
+  font-size: 60px;
+  padding-right: 20px ;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
-.red-background{
-  background-color: rgb(182, 80, 66);
-}
-
-.green-background{
-  background-color: rgb(81, 128, 88);
-}
-
-.azul-background{
-  background-color: rgb(29, 155, 144);
-}
-
-.blue-background{
-  background-color: rgb(51, 124, 153);
-}
-
-.gray-background{
-  background-color: rgb(104, 127, 136);
-}
-
-
+/* title and menu bar*/
 .nav-main{
   position:fixed;
+  font-size: 20px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 50px;
   display: flex;
   flex-wrap: wrap;
   z-index: 1000;
   background-color: rgb(43, 56, 56);
   color: #fff;
 }
+.change{
+  line-height: 10px;
+}
 
+/*button*/
 .nav-btn{
-  width: 60px;
-  height: 100%;
-  font-size: 22;
-  background-color: drgb(43, 56, 56);
-  background-image: url("menu.png");
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: center;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  padding-left: 15px;
+  padding-top: 5px;
+  background-color: rgb(43, 56, 56);
   cursor: pointer;
 }
 
@@ -79,7 +60,7 @@ body{
 
 .nav-main ul li{
   list-style: none;
-  line-height: 30px;
+  line-height: 25px;
   font-size: 20px; 
 }
 
@@ -89,16 +70,16 @@ body{
   padding: 0 10px;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgb(5, 5, 5);
   font-size: 16px;
 }
 
 .nav-sidebar{
   position: fixed;
+  top: 50px;
   left: 0;
   bottom: 0;
   width: 50px;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   padding: 0 5px;
   background-color: rgb(54, 68, 68);
   z-index: 1000;
@@ -114,12 +95,29 @@ body{
 .nav-sidebar ul li{
   line-height: 30px;
   list-style: none;
+  cursor: pointer;
 }
+
+.header{
+  display: block;
+  height: 55px;
+  padding-left: 0px;
+  padding-right: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(43, 56, 56);
+  font-size: 20px; 
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
 
 .nav-sidebar ul li span, .nav-sidebar ul li a{
  display: block;
- height: 60px;
- padding: 0 10px;
+ height: 55px;
+ padding-left: 0px;
+ padding-right: 10px;
  text-decoration: none;
  text-transform: uppercase;
  color: #fff;
@@ -131,33 +129,63 @@ body{
 .nav-sidebar ul li span{
   color:rgb(22, 22, 22);
   font-size: 20px; 
+  cursor: default;
 }
 
 #whiteb:hover{
   color: rgb(196, 196, 196);
 }
 
-
-#yellowb:hover{
+#yellow:hover{
   color: rgb(241, 215, 126);
 }
 
-#redb:hover{
+#red:hover{
   color: rgb(182, 80, 66);
 }
 
-#greenb:hover{
+#green:hover{
   color: rgb(81, 128, 88);
 }
 
-#azulb:hover{
-  color: rgb(29, 155, 144);
+#azul:hover{
+  color: rgb(33, 145, 139);
 }
 
-#blueb:hover{
+#blue:hover{
   color: rgb(51, 124, 153);
 }
 
-#grayb:hover{
+#gray:hover{
   color: rgb(134, 147, 153);
+}
+
+@media screen and (max-width : 720px){
+
+  .nav-main ul li{
+    list-style: none;
+    line-height: 20px;
+    font-size: 14px; 
+  }
+
+  .nav-sidebar ul li span, .nav-sidebar ul li a{
+    display: block;
+    height: 40px;
+  }
+
+  #color-heading{
+    text-align: right;
+    margin-top: 80px;
+    font-weight: 500;
+    font-size: 40px;
+  }
+  .change{
+    line-height: 10px;
+    font-size: 16px;
+  }
+
+  .header{
+    display: block;
+    height: 40px;
+  }
 }
