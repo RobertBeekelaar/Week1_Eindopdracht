@@ -49,6 +49,7 @@ for (let i = 0; i < liArray.length; i++) {
       let textValue = liArray[7];
       document.body.style.backgroundColor = liArray[7]
       document.getElementById('color-heading').innerHTML = (textValue)
+
     } else {
       document.body.style.backgroundColor = colorArray[i];
       document.getElementById('color-heading').innerHTML = (backgroundArray[i])
