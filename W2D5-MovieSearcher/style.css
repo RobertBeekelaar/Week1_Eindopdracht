@@ -104,19 +104,30 @@ footer{
 .submitbutton{
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  margin-top: 10px;
-  height: 30px;
+  margin-top: 20px;
+  height: 25px;
+  cursor: pointer;
+  vertical-align: middle;
 }
 .submitbutton img{
- height: 25px;
+ height: 20px;
 }
+.submitbutton img:hover{
+  height: 20px;
+  opacity: 0.5;
+ }
 
 #searchtext{
+  margin-top: 20px;
   height: 25px;
   margin-left: 44px;
   border-radius: 4px;
   width: 160px;
-  margin-top: 20px;
+  vertical-align: middle;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(22, 32, 37);
 }
 
 
