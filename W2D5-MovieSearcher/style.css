@@ -101,6 +101,24 @@ footer{
   border-radius: 8px;
 }
 
+.submitbutton{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin-top: 10px;
+  height: 30px;
+}
+.submitbutton img{
+ height: 25px;
+}
+
+#searchtext{
+  height: 25px;
+  margin-left: 44px;
+  border-radius: 4px;
+  width: 160px;
+  margin-top: 20px;
+}
+
 
 @media screen and (max-width : 720px){
 
