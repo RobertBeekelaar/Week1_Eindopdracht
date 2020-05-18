@@ -1,168 +1,53 @@
-const posters = movies.map((movie) => {
-  return movie.Poster
+const movieLocation = document.getElementById('mainlist');
+const listLocation = movieLocation.getElementsByClassName('movielist')[0];
+const buttons = document.getElementsByClassName('allbuttons')[0];
+
+movies.forEach((movie) => {
+  newLi = document.createElement('li');
+  newA = document.createElement('a');
+  newA.setAttribute('href', 'https://www.imdb.com/title/' + movie.imdbID);
+  newImg = document.createElement('img');
+  newImg.setAttribute('src', movie.Poster);
+  newLi.appendChild(newA);
+  newA.appendChild(newImg);
+  listLocation.appendChild(newLi);
 })
-const ul = document.getElementById('movielist');
-const posterList = movies.map((poster) => {
-  return poster.Poster
-})
-const moviesID = movies.map((iD) => {
-  return iD.imdbID
-})
 
-for (let i = 0; i < movies.length; i++) {
-  let posterName = posterList[i];
-  let getID = moviesID[i];
-  let newList = document.createElement('li');
-  let newLink = document.createElement('a');
-  let newPoster = document.createElement('img');
-  newPoster.setAttribute('src', posterName);
-  newLink.setAttribute('href', "https://www.imdb.com/title/" + getID);
-  ul.appendChild(newList);
-  newList.appendChild(newLink);
-  newLink.appendChild(newPoster);
-}
+buttonList = Array.from(buttons.getElementsByClassName('radiobutton'));
 
-const buttons = document.querySelectorAll('.allbuttons')
-Array.from(buttons).forEach((button) => {
-  button.addEventListener('change', () => {
-    (console.log(event.target.value));
+buttonList.forEach((button) => {
+  button.addEventListener("change", () => {
+    console.log(button.value)
 
-    while (ul.firstChild) {
-      ul.firstChild.remove();
-    }
+    if (button.value !== "newest") {
 
-    switch (event.target.value) {
-
-      case 'avengers':
-        const findAvengers = movies.filter((movie) => {
-          return movie.Title.includes('Avengers');
-        }).map((movie) => {
-          return movie.Poster
-        })
-
-        const findAvengersID = movies.filter((movie) => {
-          return movie.Title.includes('Avengers');
-        }).map((iD) => {
-          return iD.imdbID
-        })
-        for (let i = 0; i < findAvengers.length; i++) {
-          let posterName = findAvengers[i];
-          let getID = findAvengersID[i];
-          let newList = document.createElement('li');
-          let newLink = document.createElement('a');
-          let newPoster = document.createElement('img')
-          newPoster.setAttribute('src', posterName);
-          newLink.setAttribute('href', "https://www.imdb.com/title/" + getID);
-          ul.appendChild(newList);
-          newList.appendChild(newLink);
-          newLink.appendChild(newPoster);
-        }
-        break
-
-
-      case 'x-men':
-        const findXmen = movies.filter((movie) => {
-          return movie.Title.includes('X-Men');
-        }).map((movie) => {
-          return movie.Poster
-        })
-
-        const findXmenID = movies.filter((movie) => {
-          return movie.Title.includes('X-Men');
-        }).map((iD) => {
-          return iD.imdbID
-        })
-        for (let i = 0; i < findXmen.length; i++) {
-          let posterName = findXmen[i];
-          let getID = findXmenID[i];
-          let newList = document.createElement('li');
-          let newLink = document.createElement('a');
-          let newPoster = document.createElement('img')
-          newPoster.setAttribute('src', posterName);
-          newLink.setAttribute('href', "https://www.imdb.com/title/" + getID);
-          ul.appendChild(newList);
-          newList.appendChild(newLink);
-          newLink.appendChild(newPoster);
-        }
-        break
-
-      case 'princess':
-        const findPrincess = movies.filter((movie) => {
-          return movie.Title.includes('Princess');
-        }).map((movie) => {
-          return movie.Poster
-        })
-
-        const findPrincessID = movies.filter((movie) => {
-          return movie.Title.includes('Princess');
-        }).map((iD) => {
-          return iD.imdbID
-        })
-        for (let i = 0; i < findPrincess.length; i++) {
-          let posterName = findPrincess[i];
-          let getID = findPrincessID[i];
-          let newList = document.createElement('li');
-          let newLink = document.createElement('a');
-          let newPoster = document.createElement('img')
-          newPoster.setAttribute('src', posterName);
-          newLink.setAttribute('href', "https://www.imdb.com/title/" + getID);
-          ul.appendChild(newList);
-          newList.appendChild(newLink);
-          newLink.appendChild(newPoster);
-        }
-        break
-
-      case 'batman':
-        const findBatman = movies.filter((movie) => {
-          return movie.Title.includes('Batman');
-        }).map((movie) => {
-          return movie.Poster
-        })
-
-        const findBatmanID = movies.filter((movie) => {
-          return movie.Title.includes('Batman');
-        }).map((iD) => {
-          return iD.imdbID
-        })
-        for (let i = 0; i < findBatman.length; i++) {
-          let posterName = findBatman[i];
-          let getID = findBatmanID[i];
-          let newList = document.createElement('li');
-          let newLink = document.createElement('a');
-          let newPoster = document.createElement('img')
-          newPoster.setAttribute('src', posterName);
-          newLink.setAttribute('href', "https://www.imdb.com/title/" + getID);
-          ul.appendChild(newList);
-          newList.appendChild(newLink);
-          newLink.appendChild(newPoster);
-        }
-        break
-
-      case 'newest':
-        const findYear = movies.filter((filterObject) => {
-          return filterObject.Year > 2014
-        }).map((poster) => {
-          return poster.Poster
-        })
-
-        const findID = movies.filter((filterObject) => {
-          return filterObject.Year > 2014;
-        }).map((iD) => {
-          return iD.imdbID
-        })
-        for (let i = 0; i < findYear.length; i++) {
-          let posterName = findYear[i];
-          let getID = findID[i];
-          let newList = document.createElement('li');
-          let newLink = document.createElement('a');
-          let newPoster = document.createElement('img')
-          newPoster.setAttribute('src', posterName);
-          newLink.setAttribute('href', "https://www.imdb.com/title/" + getID);
-          ul.appendChild(newList);
-          newList.appendChild(newLink);
-          newLink.appendChild(newPoster);
-        }
-        break
+      const filteredMovies = movies.filter((movie) => movie.Title.includes(button.value));
+      listLocation.innerHTML = " ";
+      filteredMovies.forEach(movie => {
+        newLi = document.createElement('li');
+        newA = document.createElement('a');
+        newA.setAttribute('href', 'https://www.imdb.com/title/' + movie.imdbID);
+        newImg = document.createElement('img');
+        newImg.setAttribute('src', movie.Poster);
+        newLi.appendChild(newA);
+        newA.appendChild(newImg);
+        listLocation.appendChild(newLi);
+      })
+    } else {
+      const filteredMoviesDate = movies.filter((movie) => Number(movie.Year) >= 2014);
+      listLocation.innerHTML = " ";
+      filteredMoviesDate.forEach(movie => {
+        newLi = document.createElement('li');
+        newA = document.createElement('a');
+        newA.setAttribute('href', 'https://www.imdb.com/title/' + movie.imdbID);
+        newImg = document.createElement('img');
+        newImg.setAttribute('src', movie.Poster);
+        newLi.appendChild(newA);
+        newA.appendChild(newImg);
+        listLocation.appendChild(newLi);
+      })
     }
   })
 })
+
+
