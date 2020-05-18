@@ -1,6 +1,7 @@
 const movieLocation = document.getElementById('mainlist');
 const listLocation = movieLocation.getElementsByClassName('movielist')[0];
 const buttons = document.getElementsByClassName('allbuttons')[0];
+const searchbar = document.querySelector("#searchtext")
 
 movies.forEach((movie) => {
   newLi = document.createElement('li');
@@ -14,8 +15,6 @@ movies.forEach((movie) => {
   listLocation.appendChild(newLi);
 })
 
-//search bar
-const searchbar = document.querySelector("#searchtext")
 searchbar.addEventListener("input", e => {
   e.target.value = e.target.value.toLowerCase();
   console.log(e.target.value)
@@ -23,8 +22,7 @@ searchbar.addEventListener("input", e => {
 
   if (textValue >= "") {
     const filteredMovies = movies
-      .filter((movie) => movie.Title.toLowerCase()
-        .includes(textValue));
+      .filter((movie) => movie.Title.toLowerCase().includes(textValue));
     listLocation.innerHTML = " ";
     filteredMovies.forEach(movie => {
       newLi = document.createElement('li');
