@@ -14,7 +14,6 @@ movies.forEach((movie) => {
 })
 
 buttonList = Array.from(buttons.getElementsByClassName('radiobutton'));
-
 buttonList.forEach((button) => {
   button.addEventListener("change", () => {
     console.log(button.value)
