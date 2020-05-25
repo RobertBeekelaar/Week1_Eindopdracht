@@ -8,10 +8,11 @@ document.getElementById('todoInput').addEventListener('change', ev => {
 })
 
 //Add button
-document.getElementById('addItem').addEventListener('click', (ev) => {
+document.getElementById('addItem').addEventListener('click', async (ev) => {
   const value = document.getElementById('todoInput').value;
   if (value) addTodoItem(value)
-  postTodo(value)
+  await postTodo(value)
+  setTimeout(function () { location.reload() }, 500);
 })
 
 //Add tasks to de Dom
@@ -47,14 +48,12 @@ const addTodoItem = (text, id, done) => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     li.classList.toggle('completed')
-
     const results = () => {
       if (done) { result = false }
       else { result = true }
       return results
     }
     results();
-
     const changeBoleon = () => {
       if (done) { done = false }
       else (done = true)
@@ -71,7 +70,6 @@ const addTodoItem = (text, id, done) => {
     fetch(`https://wincacademydatabase.firebaseio.com/Robert/Tasks/${id}.json`, requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
-      // .then(setTimeout(location.reload()), 100)
       .catch(error => console.log('error', error));
     console.log(done)
   })
