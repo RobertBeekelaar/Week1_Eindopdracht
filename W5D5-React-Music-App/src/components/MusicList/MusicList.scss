@@ -1,0 +1,31 @@
+.MusicList {
+  padding-top: 10px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  width: 100%;
+  color: rgb(86, 54, 54);
+  .ListItem {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    align-items: stretch;
+  }
+  div {
+    width: 800px;
+  }
+}
+
+.artist {
+  width: 200px;
+  color: rgb(67, 0, 0);
+}
+
+li button{
+  height: 20px;
+  background-color: rgb(86, 54, 54);
+  border-radius: 10px;
+}

@@ -1,0 +1,23 @@
+.Form {
+  margin: 0px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: black;
+}
+
+input{
+  width: 154px;
+  height: 25px;
+}
+
+select{
+  width: 120px;
+  height: 31px;
+}
+
+button{
+  height: 31px;
+}

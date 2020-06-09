@@ -1,0 +1,15 @@
+.Container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 720px){
+  .Container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
