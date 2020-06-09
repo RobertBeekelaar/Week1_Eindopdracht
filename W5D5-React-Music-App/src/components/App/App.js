@@ -20,9 +20,9 @@ const App = (props) => {
   return (
     <div>
       <div className="header">
-        <button onClick={() => toggleAbout()}>MusicList</button>
+        <button onClick={() => toggleMusicList()}>MusicList</button>
 
-        <button onClick={() => toggleMusicList()}>About</button>
+        <button onClick={() => toggleAbout()}>About</button>
       </div>
       <div className={containerOn ? "ContainerOn" : "Container"}>
         <Container />

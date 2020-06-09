@@ -18,6 +18,20 @@ const Container = (props) => {
       genre: "Hiphop",
       rating: "5",
     },
+    {
+    id: "3",
+    title: "Love of my life",
+    artist: "Erykah Badu",
+    genre: "Hiphop",
+    rating: "4",
+  },
+  {
+    id: "4",
+    title: "First of the Month",
+    artist: "Bone Thugs",
+    genre: "Hiphop",
+    rating: "3",
+  },
   ])
 
   const removeMusicItem = (item) => {
