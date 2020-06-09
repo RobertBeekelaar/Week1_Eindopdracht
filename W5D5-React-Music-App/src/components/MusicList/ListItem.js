@@ -16,7 +16,7 @@ const ListItem = (props) => {
       <div class="artist">{artist}</div>
       <div>{genre}</div>
       <div>{rating}</div>
-      <div><button onClick={() => handleRemoveMusicItem(item)}>remove</button></div>
+      <div><button onClick={() => handleRemoveMusicItem(item)}>Delete</button></div>
     </li>
   )
 }
