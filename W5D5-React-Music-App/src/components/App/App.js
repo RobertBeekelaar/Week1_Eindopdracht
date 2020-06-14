@@ -5,7 +5,7 @@ import "./App.scss"
 
 const App = (props) => {
   const [aboutOn, setAboutOn] = useState(false)
-  const [containerOn, setContainerOn] = useState(false)
+  const [containerOn, setContainerOn] = useState(true)
 
   const toggleAbout = () => {
     setContainerOn(false)
@@ -24,10 +24,10 @@ const App = (props) => {
 
         <button onClick={() => toggleAbout()}>About</button>
       </div>
-      <div className={containerOn ? "ContainerOn" : "Container"}>
+      <div className={containerOn ? "ContainerOn" : "ContainerOff"}>
         <Container />
       </div>
-      <div className={aboutOn ? "AboutOn" : "About"}>
+      <div className={aboutOn ? "AboutOn" : "AboutOff"}>
         <About />
       </div>
     </div>

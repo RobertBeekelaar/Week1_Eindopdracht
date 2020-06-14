@@ -1,36 +1,29 @@
 @import "../../_typography";
 @import "../../_variables";
 
-// .groceries-header {
-//   font-family: $font-family;
-//   background-color: #282c34;
-//   min-height: 20vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: #888888;
-//   box-shadow: 0px 4px 9px -4px rgba(0,0,0,0.75);
-//   z-index: 2;
-// }
-
-.Container {
-  display: none;
-  background-color: "gray";
-  font-family: $font-family;
-}
-
 .ContainerOn {
   display: inline;
   background-color: "gray";
   font-family: $font-family;
 }
 
+.ContainerOff {
+  display: none;
+}
+
 .header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.AboutOn {
+  display: flex;
+  justify-content: center;
+}
+
+.AboutOff {
+  display: none;
 }
 
 button {
@@ -44,16 +37,6 @@ button:hover {
 button:focus {
   outline: none;
   border: 2px solid rgb(201, 201, 201);
-}
-
-.About {
-  display: none;
-  justify-content: center;
-}
-
-.AboutOn {
-  display: flex;
-  justify-content: center;
 }
 
 .text {
