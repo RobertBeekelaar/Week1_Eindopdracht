@@ -1,40 +1,59 @@
-import React, { useState, useEffect } from "react"
-import Dashboard from "./Dashboard"
+import React, { useState } from "react"
+import Dashboard from "../Dashboard/Dashboard"
 import Studentlist from "../Studentlist/Studentlist"
 import Students from "./Students"
-import './Container.scss'
+import "./Container.scss"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import StudentRoute from "./StudentRoute"
+import StudentInfo from "./StudentInfo"
 
 const Container = () => {
   const [students, setStudents] = useState([])
-
-  useEffect(() => {
-    setStudents(Students)
-  }, [])
+  const [newStudentInfo, setNewStudentInfo] = useState([
+    {
+      voornaam: "",
+      achternaam: "",
+      telefoonnummer: "",
+      emailadres: "",
+      photo: "",
+    },
+  ])
 
   const filterStudent = (item) => {
     setStudents(Students.filter((array) => array.naam === item))
   }
-  console.log(students)
 
-  const allStudents = () => {
-    setStudents(Students)
+  const filterStudentInfo = (item) => {
+    setNewStudentInfo(StudentInfo.filter((array) => array.voornaam === item))
   }
-
-  const moeilijk = () => {
-    setStudents(Students.forEach((array) => array.leuk = 0))
-  }
-
 
   return (
-    <div className="Container">
-      <Studentlist
-        filterStudent={filterStudent}
-        students={students}
-        allStudents={allStudents}
-        moeilijk={moeilijk}
-      />
-      <Dashboard students={students} setStudents={setStudents} />
-    </div>
+    <Router>
+      <div className="Container">
+        <Studentlist
+          filterStudent={filterStudent}
+          filterStudentInfo={filterStudentInfo}
+        />
+        <Route
+          path="/"
+          exact
+          render={(props) => <Dashboard {...props} Students={Students} />}
+        />
+        <Route
+          path="/:naam"
+          render={(props) => (
+            <StudentRoute
+              {...props}
+              Students={Students}
+              students={students}
+              setStudents={setStudents}
+              newStudentInfo={newStudentInfo}
+              setNewStudentInfo={setNewStudentInfo}
+            />
+          )}
+        />
+      </div>
+    </Router>
   )
 }
 

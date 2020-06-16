@@ -1,0 +1,98 @@
+.Dashboard {
+  transition: all 0.4s;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.InfoMain {
+  color: #325784;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.BothChartsOn {
+  display: inline;
+}
+.BothChartsOff {
+  display: none;
+}
+
+.DifficultChartOn {
+  display: inline;
+}
+.DifficultChartOff {
+  display: none;
+}
+
+.FunChartOn {
+  display: inline;
+}
+.FunChartOff {
+  display: none;
+}
+
+.topbuttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+
+.topbuttons button {
+  width: 150px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 5px;
+  border: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+.topbuttons button:focus {
+  outline: none;
+  border: 2px solid #4b90e2;
+}
+
+.difficultyButton {
+  background-color: #efca5b;
+}
+
+.difficultyButton:hover {
+  background-color: #ecba1e;
+}
+
+.funButton {
+  background-color: #6baeff;
+}
+
+.funButton:hover {
+  background-color: #4b90e2;
+}
+
+.bothButton {
+  background-image: linear-gradient(to right, #efca5b, #6baeff);
+}
+
+.bothButton:hover {
+  background-image: linear-gradient(to right, #ecba1e, #4b90e2);
+}
+
+@media screen and (max-width: 879px) {
+  .Dashboard {
+    padding-top: 115px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Dashboard {
+    padding-top: 150px;
+  }
+}

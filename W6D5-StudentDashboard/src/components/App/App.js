@@ -3,7 +3,6 @@ import Container from "../Container/Container"
 
 
 const App = () => {
-
   return (
     <div className="App">
       <Container />
