@@ -15,7 +15,7 @@ const BarChartFun = (props) => {
   return (
     <div>
       <VictoryChart
-        animate={{ duration: 1000, easing: "linear" }}
+        animate={{ duration: 600, easing: "linear" }}
         width={1000}
         theme={VictoryTheme.material}
         domainPadding={10}
@@ -43,7 +43,7 @@ const BarChartFun = (props) => {
       </VictoryChart>
 
       <VictoryChart
-        animate={{ duration: 1000, easing: "linear" }}
+        animate={{ duration: 600, easing: "linear" }}
         domainPadding={10}
         width={1000}
         theme={VictoryTheme.material}
