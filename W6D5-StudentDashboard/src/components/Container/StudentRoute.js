@@ -103,7 +103,7 @@ const StudentRoute = (props) => {
           <img className="Profilepic" src={`${newInfo.photo}`} />
         </span>
         <div className="Info">
-          More information about the student:
+          Information about the student:
           <br /> <br />
           Name: &nbsp;
           {newInfo.voornaam}&nbsp;{newInfo.achternaam} <br />

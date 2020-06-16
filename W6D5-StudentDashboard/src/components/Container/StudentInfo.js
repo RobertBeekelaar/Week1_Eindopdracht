@@ -43,7 +43,7 @@ const StudentInfo = [
     voornaam: "Maurits",
     achternaam: "Schoonbeek",
     telefoonnummer: "+31696970899",
-    emailadres: "m.s.programming@gmail.com",
+    emailadres: "M.Schoonbeek@gmail.com",
     photo:
       "https://gokubi.com/wp-content/uploads/2013/10/Steve-Andersen-Headshot-square1.jpeg",
   },
@@ -59,7 +59,7 @@ const StudentInfo = [
     voornaam: "Sandra",
     achternaam: "Donder",
     telefoonnummer: "+31695040506",
-    emailadres: "DonderSandratjuh@gmail.com",
+    emailadres: "DonderSandra@gmail.com",
     photo:
       "https://www.anjajonestranslation.co.uk/wp-content/uploads/AJ-square-profile-pic-small.jpg",
   },

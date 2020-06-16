@@ -26,7 +26,7 @@ const Studentlist = (props) => {
     <div>
       <div className="Header">
         Winc student dashboard
-        <img src="./favicon2.png" />
+        <img className="headerimage" src="./favicon2.png" />
         <div className="Studentlist">
           <Link to={`/`}>
             <button>Show all</button>
