@@ -1,0 +1,11 @@
+@import "_typography";
+@import "_variables";
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(221, 254, 255);
+}

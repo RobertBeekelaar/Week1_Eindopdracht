@@ -2,10 +2,10 @@ import React, { useState } from "react"
 import Dashboard from "../Dashboard/Dashboard"
 import Studentlist from "../Studentlist/Studentlist"
 import Students from "./Students"
-import "./Container.scss"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import StudentRoute from "./StudentRoute"
 import StudentInfo from "./StudentInfo"
+import "./Container.scss"
 
 const Container = () => {
   const [students, setStudents] = useState([])

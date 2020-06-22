@@ -1,0 +1,24 @@
+.Form {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background: rgb(130, 194, 255);
+  padding: 15px 0px;
+  font-family: "Varela Round", sans-serif;
+
+  select {
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(38, 46, 53);
+  }
+  input {
+    border-radius: 5px;
+  }
+  .submitButton {
+    background: rgb(221, 254, 255);
+    opacity: 0.5;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: "Varela Round", sans-serif;
+  }
+}

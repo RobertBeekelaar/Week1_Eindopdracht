@@ -1,0 +1,42 @@
+.ListItem{
+  list-style: none;
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 10px;
+
+  .removebutton{
+    background: rgb(130, 194, 255);
+    opacity: 0.5;
+    border: none;
+    border-radius:5px;
+  }
+  .removebutton:hover{
+    opacity: 0.8;
+  }
+  .removebuttonRed{
+    background: rgb(133, 6, 6);
+    opacity: 0.5;
+    border: none;
+    border-radius:5px;
+  }
+  .removebuttonRed:hover{
+    opacity: 0.8;
+  }
+
+  
+  .time{
+    font-weight: 700;
+  }
+  
+  .timeOff{
+  font-weight: 700;
+  color:rgb(183, 0, 0);
+  }
+  
+  .unavailableButton{
+    background: rgb(130, 194, 255);
+    border: none;
+    border-radius:5px;
+    width: 135px;
+  }
+}
